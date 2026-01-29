@@ -1,0 +1,234 @@
+/* スマホ向け釣果記録アプリのデザイン */
+body {
+   background-image: url("../img/fish_bg.jpg"); /* 魚の背景 */
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   font-family: "DotGothic16", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   margin: 0;
+   padding-bottom: 30px;
+}
+
+.tech-machine {
+    background-color: rgba(225, 225, 255, 0.9); /* 少しだけ透過 */
+    border: 5px solid #3b4cca; 
+    border-radius: 20px;
+    width: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+}
+
+.header {
+    background-color: #3b4cca; 
+    color: #ffffff;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.body {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+/* 釣りセクション */
+.fishing-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.fishing-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.fishing-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.fishing-info form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.fishing-info label {
+    font-size: 16px;
+    color: #333333;
+}
+
+.fishing-info select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #3b4cca;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "DotGothic16", sans-serif;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 10px;
+    background-color: #3b4cca; 
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "DotGothic16", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #2d3994;
+}
+
+/* 釣った魚の数表示セクション */
+.add-move-section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    background-color: #f0f3ff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.add-move-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.add-move-section p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+    .tech-machine {
+        width: 90%;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .fishing-info h2 {
+        font-size: 18px;
+    }
+
+    .fishing-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .fishing-info label {
+        font-size: 14px;
+    }
+
+    .fishing-info select {
+        font-size: 14px;
+    }
+
+    .button-group button {
+        font-size: 14px;
+    }
+
+    .add-move-section h2 {
+        font-size: 18px;
+    }
+
+    .add-move-section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tech-machine {
+        width: 95%;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .fishing-info h2 {
+        font-size: 16px;
+    }
+
+    .fishing-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .fishing-info label {
+        font-size: 12px;
+    }
+
+    .fishing-info select {
+        font-size: 12px;
+    }
+
+    .button-group button {
+        font-size: 12px;
+    }
+
+    .add-move-section h2 {
+        font-size: 16px;
+    }
+
+    .add-move-section p {
+        font-size: 12px;
+    }
+}
+
+small {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}

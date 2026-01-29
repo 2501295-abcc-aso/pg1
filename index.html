@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>今日の釣果記録アプリ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- レトロなフォントの追加 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" type="text/javascript" charset="UTF-8"></script>
+    <!--javascriptの読み込み-->
+  </head>
+  <body>
+    <div class="tech-machine">
+      <div class="header">
+        <h1>今日の釣果記録アプリ</h1>
+      </div>
+      <div class="body">
+        <div class="content">
+          <!-- 釣竿投擲セクション -->
+          <div class="fishing-info">
+            <h2>釣竿を投げる</h2>
+            <img
+              src="img/fishing.jpg"
+              alt="釣っている人の画像"
+              class="fishing-image"
+            />
+            <form>
+              <!-- セレクトボックスに変更 -->
+              <label for="baitSelect">針先につけるエサの種類:</label>
+              <select id="baitSelect">
+                <option value="">選択してください</option>
+                <option value="bass">ルアー（ブラックバス）</option>
+                <option value="tuna">生き餌（マグロ）</option>
+                <option value="aji">人工餌（アジ）</option>
+              </select><br /><br />
+              
+              <!-- ボタンを横並びに配置 -->
+              <div class="button-group">
+                <button type="button" onclick="fishingRod()">投げる</button>
+                <button type="button" onclick="releaseFish()">リリース</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- 釣果表示セクション -->
+        <div class="add-move-section">
+          <h2>今日の釣果</h2>
+          <p id="totalCount">合計釣果: 0匹</p>
+          <p id="bassCount">ブラックバス: 0匹</p>
+          <p id="tunaCount">マグロ: 0匹</p>
+          <p id="ajiCount">アジ: 0匹</p>
+        </div>
+      </div>
+    </div>
+    
+    <!--初期化関数の呼び出し-->
+    <script>
+      initializeCounts();
+    </script>
+    <small>2501295　吉戒聡一郎</small>
+  </body>
+</html>
